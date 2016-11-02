@@ -1,0 +1,22 @@
+{
+  "name": "UI demo",
+  "description": "UI demo front end dev dependencies",
+  "main": "index.js",
+  "authors": [
+    "jesus colavita"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/karsilama/ui-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "1.5",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.7"
+  }
+}

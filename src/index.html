@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Nested Sates & Named Views</title>
+    <link rel="stylesheet" href="assets/css/bundle.css">
+
+    <!-- starts vendors -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css">
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endss vendors -->
+
+    <!-- starts modules -->
+    <script src="app/app.module.js"></script>
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/routing/routing.module.js"></script>
+    <script src="app/partials/partials.module.js"></script>
+    <script src="app/services/services.module.js"></script>
+    <script src="app/widgets/widgets.module.js"></script>
+    <!-- ends modules -->
+
+    <!-- starts controllers -->
+    <script src="app/partials/students/students.controller.js"></script>
+    <script src="app/partials/students/students-detail.controller.js"></script>
+    <!-- ends controllers -->
+
+    <!-- starts services -->
+    <script src="app/services/students.service.js"></script>
+    <script src="app/services/resolve.service.js"></script>
+    <!-- ends services -->
+
+    <script src="app/core/routing/routing.config.js"></script>
+
+  </head>
+  <body>
+    <ui-view></ui-view>
+  </body>
+</html>

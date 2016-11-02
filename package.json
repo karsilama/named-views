@@ -1,0 +1,18 @@
+{
+  "name": "ui-demo",
+  "version": "1.0.0",
+  "description": "ui project",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "author": "jesus colavita",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.1.0",
+    "gulp-sourcemaps": "^2.2.0"
+  }
+}

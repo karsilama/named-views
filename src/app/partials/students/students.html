@@ -1,0 +1,23 @@
+<nav class="navbar narvbar-default navbar-fixed">
+  <div class="container-fluid">
+    <h1>All Students</h1>
+  </div>
+</nav>
+
+
+<div class="flex-container">
+  <div class="flex-item">
+    <table class="table table-striped">
+      <tbody>
+        <tr ng-repeat="user in studentsCtrl.users">
+          <th>
+            <a ui-sref="students.detail({id:user.id})" ng-bind="user.name"></a>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="flex-item">
+    <div ui-view="students-detail"></div>
+  </div>
+</div>
