@@ -26,10 +26,15 @@
         .state('students.detail', {
           url : '/detail/:id',
           views : {
-            "students-detail" : {
-              templateUrl : '/app/partials/students/students-detail.html',
+            detail : {
+              templateUrl : '/app/partials/students/detail.html',
               controller : 'studentsDetailController',
               controllerAs : 'studentsDetailCtrl'
+            },
+            map : {
+              templateUrl : '/app/partials/students/map.html',
+              controller : 'mapController',
+              controllerAs : 'mapCtrl'
             }
           },
         })

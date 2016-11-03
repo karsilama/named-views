@@ -1,5 +1,5 @@
 (function(){
   'use strict';
   angular
-  .module('app.partials', []);
+  .module('app.partials', ['ngMap']);
 })() ;

@@ -10,7 +10,7 @@
 
     function studentsService(resolveService) {
 
-      var users = [];
+      var students = [];
 
       var service = {
         getAll : getAll,
@@ -20,20 +20,20 @@
       return service;
 
       function getOne (id ){
-        for (var i in users ){
-          if(id == users[i].id){
-            return users[i];
+        for (var i in students ){
+          if(id == students[i].id){
+            return students[i];
             break;
           }
         }
       }
 
       function getAll ( callback ) {
-        return resolveService
+        return ( new resolveService() )
           .get('http://jsonplaceholder.typicode.com/users')
-          .then(function(response){
-             users = response.data ;
-             callback( users )
+          .then(function(all){
+             students = all ;
+             callback( students )
           }) ;
       }
 

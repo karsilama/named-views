@@ -6,15 +6,18 @@
 
       .service('resolveService', resolveService ) ;
 
-      resolveService.$inject = ['$http','$q'] ;
+      resolveService.$inject = [ '$injector', '$http', '$q' ] ;
 
-      function resolveService($http, $q) {
+      function resolveService( $injector, $http, $q ) {
 
-        var factory = {
-          get : get
-        } ;
+        return function() {
 
-        return factory;
+          return $injector.instantiate( function() {
+
+            this.get = get ;
+
+          } ) ;
+        }
 
         function get(url, method) {
 
@@ -25,14 +28,16 @@
             url : url,
             method : method ? method : 'GET'
           })
-          .then(function(students){
+          .success(function(students){
             defered.resolve(students) ;
-          }, function(error){
-            defered.reject(error) ;
           })
+          .error( function(error){
+            defered.reject(error) ;
+          } ) ;
 
           return promise ;
         }
 
       }
+
 })() ;
